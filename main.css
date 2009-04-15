@@ -1,0 +1,129 @@
+/* RESET ---------------- */
+IMG, FIELDSET {border:0}
+HR, .n {display:none}
+
+/* GENERAL ---------------- */
+HTML {font-size:100.01%; padding:0}
+BODY {font: normal normal normal .8em Georgia, Batang, serif; margin:0; padding:0}
+H1, H2, H3, H4, H5, H6 {font-weight:500; margin:1em 0 .5em}
+H1 {font-size:1.8em}
+H2 {font-size:1.4em}
+H3 {font-size:1.2em}
+H4 {font-size:1em; text-transform:capitalize; letter-spacing:.1em}
+P, LI {margin:0 0 1em; line-height:1.5em}
+UL, OL, DL, TABLE {margin:0 0 1.25em; padding-left:0}
+DD {margin-left:2.2em; padding-left:0}
+LI {margin-left:1.8em; padding-left:0}
+LI, DD, DT {margin-bottom:.5em}
+
+TABLE {border-collapse:collapse}
+TD, TH {padding-right:.5em; font-weight:500}
+TR.header {margin-bottom:1.2em}
+TR.header TH {border-bottom:1px solid #999}
+
+I {position:absolute; width:16px; height:16px; margin-left:-21px; padding-right:5px;}
+#nav DT {font-size:1.8em; margin:.5em 0 .25em}
+.title {font-size:1.8em; margin:.5em 0 .75em}
+
+CITE {font-style: italic}
+TT, CODE, SAMP {font:1.1em monospace}
+KBD {background-color:#f5f5e6; font: .86em sans-serif; padding: 0 .3em 0 .2em; border-bottom:2px solid #ccccbc; border-left:1px solid #dbdbca; border-right:1px solid #dbdbca; outline: 1px solid #c2c2ab}
+FIELDSET {margin:0; padding:0}
+LEGEND {color:#000}
+
+/* BOX  ---------------- */
+BODY, HTML {height:100%}
+.box-out {min-height:100%; max-width:100%;}
+	* HTML .box-out	{height:100%}
+	#top {display:block; text-decoration:none; font-size:2.8em; line-height:2em; text-align: center;}
+	A#top:hover {background-color:#331a00}
+	.box-in {width:52em; margin:2em auto 0; padding:0 1em 2em}
+		#content {float:right; width:31em; min-height:16em; margin-bottom:4em}
+			.content-in {float: left; width:38em;}
+			.aside {float:right; width:6em}
+				.aside SPAN {margin-left:-20px; display:block;}
+				.aside DEL {margin-left:-20px; display:block; font-size: 1em; opacity: .1;}
+		#nav {float:left; width:20.9em; margin:0 0 2em; color:#999}
+			#nav DT {}
+			#nav STRONG {font-weight:500; color:#000}
+		.clr {clear:both; width:1px; height:1px;}
+	#footer {margin-top:-2em; height:2em; clear:both; text-align:center; position: relative;}
+		#footer P {line-height:2em; margin-bottom:0}
+
+/* COLORS  ---------------- */
+HTML, BODY {background-color: #ebe5dd}
+A {color:#994c00;}
+.box-out {background:#ebe5dd}
+.box-in {color:#000}
+#top {color:#decdbd; background:#2a231d; border-bottom: 1px solid #804000; text-shadow:1px 1px 1px #000}
+#footer {color:#998e82; background:#2a231d}
+A#top, #footer A {color:#998a7a}
+A#top:hover, #footer A:hover {color:#ffb266}
+#nav A {margin-left:-.2em; margin-right:-.2em; padding-left:.2em; padding-right:.2em}
+#content A:visited {color:#888}
+#content A:hover,
+#nav A:hover {color:#4d0000; background:#fff1ad;}
+.error {color:#900}
+
+/* BROWSERS  ---------------- */
+.section {padding: 1em; border-bottom: 1px solid #ddd; /*-webkit-border-radius: 1em; -moz-border-radius: 1em; border-radius: 1em;*/}
+.section:target {border-top-color: #fff; border-bottom-color: #ccc}
+.section H2 A {padding-left: 20px; text-decoration:none}
+.section H2 U {border-bottom: 1px dashed; text-decoration:none}
+.section:target H2 A {color: #000 !important; cursor: default} 
+.section H2 {margin-top:0}
+.section OL {margin-bottom: 0}
+
+#opera {background: #EEDFD9; border-bottom-color: #e0d2cc}
+#opera:target {background: #f5cece; border-bottom-color: #dbb8b8}
+#opera:target H2 U {border-bottom-color: #f5cece;}
+#opera A.opera {color:#a00; background:url(i/opera-logo.png) no-repeat left center; border-bottom-color:#900}
+#opera A {color:#900}
+
+#firefox {background: #EDE2D0; border-bottom-color: #e0d6c5;}
+#firefox:target {background: #f0dbb6; border-top-color: #ffe9c2; border-bottom-color: #d6c3a3}
+#firefox:target H2 U {border-bottom-color: #f0dbb6;}
+#content A.firefox {color:#994c00; background:url(i/firefox-logo.png) no-repeat left center; border-bottom-color: #994c00}
+
+#safari {background: #E3E7E3; border-bottom-color: #d7dbd7}
+#safari:target {background: #d3eaf0; border-bottom-color: #bcd1d6}
+#safari:target H2 U {border-bottom-color: #d3eaf0}
+#safari A.safari {color:#1f6699; background:url(i/safari-logo.png) no-repeat left center; border-bottom-color: #2680bf}
+#safari A {color:#1f6699;}
+
+#ie {background: #E0E2E3; border-bottom-color: #d4d5d6}
+#ie:target {background:#c9ddf0; border-bottom-color: #b4c6d6}
+#ie:target H2 U {border-bottom-color: #c9ddf0}
+#ie A.ie {color:#1470cc; background:url(i/ie-logo.png) no-repeat left center; border-bottom-color: #1470cc}
+#ie A {color: #1470cc}
+
+/* OTHER  ---------------- */
+#content>.title {white-space:nowrap}
+.intro IMG[alt] {font-size:1.4em; font-style:italic}
+OL.large {margin-bottom:1.5em}
+.large LI {margin-bottom:1em}
+.star {font-size:1.54em; color:#999; position:relative; top:.15em}
+ABBR, ACRONYM {letter-spacing:.09em}
+.head ABBR, .head ACRONYM {padding-left:.2em}
+UL LI {list-style-type: circle}
+
+LABEL, [type=button], [type=image], [type=submit] {cursor:pointer}
+
+A.external {position:relative}
+IMG.icon {float:left; margin-left:-20px; padding-right:4px}
+[rel~=me] {-o-link:'mailto:me+css@elv1s.ru?subject=UserCSS'; -o-link-source: current}
+A[hreflang]:after {content:' ['attr(hreflang)']'}
+
+@media all and (-webkit-min-device-pixel-ratio:0) {
+	A {-webkit-transition: color .5s ease-out, border-bottom-color .5s linear}
+	A#top, #footer A {background-color .5s ease-out}
+	.section {background: #ebe5dd; -webkit-transition: color .5s linear, background-color .5s linear, border-top-color .5s linear, border-bottom-color .5s linear}
+	.section:target {position:relative;}
+	.setup .section OL {-webkit-transition: height .2s ease-out, color .2s linear, border-bottom-color 2s linear}
+}
+
+/* HACKS  ---------------- */
+*HTML {filter: expression(runtimeStyle.filter = '',document.execCommand('BackgroundImageCache', false, true));}
+@-moz-document url-prefix() {
+	A#top {outline: none}
+}
