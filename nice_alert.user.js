@@ -16,8 +16,23 @@ var w = window.wrappedJSObject || window;
 if (!w.alert.isNice) {
 		
 	w.alert = function(msg){
-	
-		var alertStyles = '#nice_alert {\
+
+		if (typeof GM_addStyle == 'undefined') {
+			/**
+			 * @param css String like '* {color:red}'
+			 */
+			function GM_addStyle(css) {
+				var head = document.getElementsByTagName('head')[0];
+				if (head) {
+					var style = document.createElement("style");
+					style.type = "text/css";
+					style.appendChild(document.createTextNode(css));
+					head.appendChild(style);
+				}
+			}
+		}
+
+		GM_addStyle('#nice_alert {\
 			color: InfoText;\
 			font: 14px/16px sans-serif;\
 			position: fixed;\
@@ -44,17 +59,10 @@ if (!w.alert.isNice) {
 			outline: 0;\
 			-webkit-box-shadow: 0px 2px 8px rgba(0,0,0,0.2);\
 			-moz-box-shadow: 0px 2px 8px rgba(0,0,0,0.3);\
-		}';	
-		var heads = document.evaluate('//head',document,null,XPathResult.ANY_TYPE,null);
-		var head = heads.iterateNext();
-		if (head) {
-			var style = document.createElement("style");
-			style.type = "text/css";
-			style.appendChild(document.createTextNode(alertStyles));
-			head.appendChild(style);
-		}	
+		}');
+
 		var niceAlert = document.createElement('ol');
-		niceAlert.id = 'nice_alert';	 
+		niceAlert.id = 'nice_alert';
 	
 		if (document.body) {
 			document.body.appendChild(niceAlert);
