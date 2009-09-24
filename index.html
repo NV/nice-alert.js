@@ -4,8 +4,7 @@
 	<meta charset="utf-8">
 	<title>Nice-alert.js</title>
 	<style type="text/css">
-		#content,
-		#footer {
+		#content {
 			width: 32em;
 			margin: 0 auto;
 		}
@@ -16,44 +15,34 @@
 	<link rel="author" href="http://elv1s.ru/" title="Никита Васильев">
 	<script type="text/javascript">
 	if (!alert.isNice) {
-		document.write(unescape("%3Cscript src='nice_alert.js' type='text/javascript'%3E%3C/script%3E"));
+		document.write(unescape("%3Cscript src='http://userscripts.ru/js/nice-alert/nice_alert.js' type='text/javascript'%3E%3C/script%3E"));
 	}
 	</script>
 </head>
 
 <body>
-		<div id="content">		
-			<h1 class="title">Nice-alert.js</h1>
-			<form>
-			alert('<input value="Hello World!" size=16>')
-			</form>			
-			<p>Download <a href="nice_alert.js" id="download_link">Nice alert.js</a>.</p>
-			<p><a href="http://github.com/NV/nice-alert/">Fork it on github</a>.</p>
-			<script type="text/javascript">
-				var form = document.forms[0],
-				    input = form.getElementsByTagName('INPUT')[0];
-				form.onsubmit = function(){
-					alert(input.value);
-					return false;
-				}
-				input.focus();
+	<div id="content">
+		<h1 class="title">Nice-alert.js</h1>
+		<form>
+		alert('<input value="YADA-YADA!" size=16>')
+		</form>
+		<p>Download <a href="http://userscripts.ru/js/nice-alert/nice_alert.js" id="download_link">nice_alert.js</a>.</p>
+		<p><a href="http://github.com/NV/nice-alert.js/">Fork it on github</a>.</p>
+		<script type="text/javascript">
+			var form = document.forms[0],
+					input = form.getElementsByTagName('INPUT')[0];
+			form.onsubmit = function(){
 				alert(input.value);
-
-				var download_link = document.getElementById('download_link');
-				if (!window.opera && download_link.href.indexOf('.user.js') == -1) {
-					download_link.href = download_link.href.replace('.js', '.user.js');
-				} /*@cc_on else if (download_link.href.indexOf('.ieuser.js') == -1) {
-					download_link.href = download_link.href.replace('http://', 'ie7pro://').replace('.js', '.ieuser.js');
-				} @*/
-			</script>
-		</div>
-
+				return false;
+			}
+			input.focus();
+			alert(input.value);
+			var download_link = document.getElementById('download_link');
+			if (!window.opera && download_link.href.indexOf('.user.js') == -1) {
+				download_link.href = download_link.href.replace('.js', '.user.js');
+			} /*@cc_on else if (download_link.href.indexOf('.ieuser.js') == -1) {
+				download_link.href = download_link.href.replace('http://', 'ie7pro://').replace('.js', '.ieuser.js');
+			} @*/
+		</script>
 	</div>
-
-</div>
-
-<hr>
-<div id="footer">
-	<p class="copyright">&copy; <a href="http://elv1s.ru/" rel="me">Никита Васильев</a></p>
-</div>
 </body></html>
