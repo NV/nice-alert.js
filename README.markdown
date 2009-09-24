@@ -1,10 +1,10 @@
 Nice-alert.js
 ===============================
 
-Before:
+Before:    
 ![Ugly](/NV/nice-alert.js/raw/master/ugly.png)
 
-After:
+After:    
 ![Nice](/NV/nice-alert.js/raw/master/nice.png)
 
 [Demo](http://nv.github.com/nice-alert.js/)
