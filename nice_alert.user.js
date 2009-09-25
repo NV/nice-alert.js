@@ -56,6 +56,7 @@ if (!w.alert.is_nice) {
       clear: both;\
       overflow: hidden;\
       font-size: 14px;\
+      white-space: pre-wrap;\
       outline: 0;\
       -webkit-box-shadow: 0px 2px 8px rgba(0,0,0,0.2);\
       -moz-box-shadow: 0px 2px 8px rgba(0,0,0,0.3);\
