@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div {
+			position:absolute;
+			right:0;
+			top:0;
+			width:100px;
+			height:400px;
+			background:black;
+			color: white;
+			z-index: 9999;
+		}
+	</style>
+</head>
+<body>
+<div>This box should be behind alert</div>
+<script type="text/javascript">
+window.onload = function(){
+	alert('This message should be in front of black box')
+}
+</script>
+</body></html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+	alert('Alert from the head!');
+	</script>
+</head>
+<body>
+<script type="text/javascript">
+alert('Alert from the body!');
+document.addEventListener('DOMContentLoaded', function(){
+	alert('Alert from DOMContentLoaded!');
+}, false);
+window.onload = function(){
+	alert('Alert from window.onload!');
+};
+</script>
+</body></html>
