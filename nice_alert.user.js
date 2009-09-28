@@ -4,7 +4,7 @@
 // @include     *
 // @description Not modal alert box
 // @author      Nikita Vasilyev
-// @version     0.72
+// @version     0.73
 // @licence     GPL
 // ==/UserScript==
 
@@ -90,7 +90,7 @@
     cache.tabIndex = 0;
     
     (w.alert = function(msg){
-      w.alert.is_nice = 'Of couse it is!';
+      w.alert.is_nice = 'Of course it is!';
       //if (nice_alert.childNodes.length > 99) return;
       var li = cache.cloneNode(false);
       li.appendChild(document.createTextNode(msg));
@@ -103,7 +103,6 @@
           clearInterval(showing);
         }
       }, 30);
-      return w.alert;
     })(msg);
     
   };
