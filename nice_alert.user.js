@@ -4,8 +4,8 @@
 // @include     *
 // @description Not modal alert box
 // @author      Nikita Vasilyev
-// @version     0.73
-// @licence     GPL
+// @version     0.8
+// @licence     LGPL 3
 // ==/UserScript==
 
 
@@ -13,7 +13,7 @@
 
   var w = window.wrappedJSObject || window;
 
-  if (w.alert.is_nice) return;
+  if (w.alert.is_nice || !document.body) return;
 
   w.alert = function(msg){
 
@@ -33,33 +33,33 @@
     }
 
     GM_addStyle('#nice_alert {\
-      color: InfoText;\
-      font: 14px/16px sans-serif;\
-      position: fixed;\
-      top: 0;\
-      right: 0;\
-      margin: 0;\
-      padding: 0;\
-      list-style-type: none;\
-      float: left;\
-      cursor: pointer;\
-      text-align: left;\
-      z-index: 99;\
+      font: 14px/16px sans-serif !important;\
+      position: fixed !important;\
+      top: 0 !important;\
+      right: 0 !important;\
+      margin: 0 !important;\
+      padding: 0 !important;\
+      list-style-type: none !important;\
+      float: left !important;\
+      cursor: pointer !important;\
+      text-align: left !important;\
+      z-index: 9999 !important;\
     }\
     #nice_alert li {\
-      background-color: InfoBackground;\
-      border-bottom: 1px solid #ccc;\
-      border-bottom: 1px solid rgba(0,0,0,0.3);\
-      margin: 0;\
+      background-color: InfoBackground !important;\
+      color: InfoText !important;\
+      border-bottom: 1px solid #ccc !important;\
+      border-bottom: 1px solid rgba(0,0,0,0.3) !important;\
+      margin: 0 !important;\
       opacity: 0;\
-      float: right;\
-      clear: both;\
-      overflow: hidden;\
-      font-size: 14px;\
-      white-space: pre-wrap;\
-      outline: 0;\
-      -webkit-box-shadow: 0px 2px 8px rgba(0,0,0,0.2);\
-      -moz-box-shadow: 0px 2px 8px rgba(0,0,0,0.3);\
+      float: right !important;\
+      clear: both !important;\
+      overflow: hidden !important;\
+      font-size: 14px !important;\
+      white-space: pre-wrap !important;\
+      outline: 0 !important;\
+      -webkit-box-shadow: 0px 2px 8px rgba(0,0,0,0.2) !important;\
+      -moz-box-shadow: 0px 2px 8px rgba(0,0,0,0.3) !important;\
     }');
 
     var nice_alert = document.getElementById('nice_alert') || document.createElement('ol');
@@ -72,7 +72,6 @@
         t.style.height = h +'px';
         var closing = setInterval(function(){
           t.style.opacity -= 0.1;
-          //t.style.fontSize = parseInt(t.style.fontSize) - 1 +'px';
           t.style.paddingTop = parseInt(t.style.paddingTop) - 1 +'px';
           t.style.paddingBottom = parseInt(t.style.paddingBottom) - 1 +'px';
           var currentHeight = parseInt(t.style.height) - h/10;
