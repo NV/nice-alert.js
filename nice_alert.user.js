@@ -4,7 +4,7 @@
 // @include     *
 // @description Not modal alert box
 // @author      Nikita Vasilyev
-// @version     0.8
+// @version     1.0 RC
 // @licence     LGPL 3
 // ==/UserScript==
 
@@ -13,7 +13,7 @@
 
   var w = window.wrappedJSObject || window;
 
-  if (w.alert.is_nice || !document.body) return;
+  if (w.alert.is_nice) return;
 
   w.alert = function(msg){
 
@@ -45,7 +45,7 @@
       text-align: left !important;\
       z-index: 9999 !important;\
     }\
-    #nice_alert li {\
+    #nice_alert ALERTBOX {\
       background-color: InfoBackground !important;\
       color: InfoText !important;\
       border-bottom: 1px solid #ccc !important;\
@@ -58,16 +58,16 @@
       font-size: 14px !important;\
       white-space: pre-wrap !important;\
       outline: 0 !important;\
-      -webkit-box-shadow: 0px 2px 8px rgba(0,0,0,0.2) !important;\
-      -moz-box-shadow: 0px 2px 8px rgba(0,0,0,0.3) !important;\
+      -webkit-box-shadow: 0px 2px 8px rgba(0,0,0,0.2);\
+      -moz-box-shadow: 0px 2px 8px rgba(0,0,0,0.3);\
     }');
 
-    var nice_alert = document.getElementById('nice_alert') || document.createElement('ol');
+    var nice_alert = document.getElementById('nice_alert') || document.createElement('alertsgroup');
     nice_alert.id = 'nice_alert';
-    document.body.appendChild(nice_alert);
+    document.documentElement.appendChild(nice_alert);
     nice_alert.addEventListener('click',function(e){
       var t = e.target;
-      if (t.tagName == 'LI') {
+      if (t.tagName == 'ALERTBOX') {
         var h = t.clientHeight - 18;
         t.style.height = h +'px';
         var closing = setInterval(function(){
@@ -84,7 +84,7 @@
       }
     }, false);
 
-    var cache = document.createElement('li');
+    var cache = document.createElement('ALERTBOX');
     cache.style.padding = '0px 16px';
     cache.tabIndex = 0;
     
