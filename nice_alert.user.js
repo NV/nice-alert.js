@@ -4,7 +4,7 @@
 // @include     *
 // @description Not modal alert box
 // @author      Nikita Vasilyev
-// @version     1.0 RC
+// @version     1.0
 // @licence     LGPL 3
 // ==/UserScript==
 
