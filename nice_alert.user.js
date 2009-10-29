@@ -15,7 +15,7 @@
 
   if (w.alert.is_nice) return;
 
-  w.alert = function(msg){
+  w.alert = function alert (msg){
 
     if (typeof GM_addStyle == 'undefined') {
       /**
@@ -88,7 +88,7 @@
     cache.style.padding = '0px 16px';
     cache.tabIndex = 0;
     
-    (w.alert = function(msg){
+    (w.alert = function alert (msg) {
       w.alert.is_nice = 'Of course it is!';
       //if (nice_alert.childNodes.length > 99) return;
       var li = cache.cloneNode(false);
