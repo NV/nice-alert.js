@@ -2,9 +2,9 @@
 // @name        Nice alert
 // @namespace   http://userscripts.ru/
 // @include     *
-// @description Not modal alert box
+// @description Makes alert box suck less
 // @author      Nikita Vasilyev
-// @version     1.0
+// @version     1.1
 // @licence     LGPL 3
 // ==/UserScript==
 
@@ -19,7 +19,8 @@
 
     if (typeof GM_addStyle == 'undefined') {
       /**
-       * @param css String like '* {color:red}'
+       * Example: GM_addStyle('* {color:red}')
+       * @param {String} css
        */
       function GM_addStyle(css) {
         var head = document.getElementsByTagName('head')[0];
@@ -62,7 +63,7 @@
       -moz-box-shadow: 0px 2px 8px rgba(0,0,0,0.3);\
     }');
 
-    var nice_alert = document.getElementById('nice_alert') || document.createElement('alertsgroup');
+    var nice_alert = document.getElementById('nice_alert') || document.createElement('ALERTGROUP');
     nice_alert.id = 'nice_alert';
     document.documentElement.appendChild(nice_alert);
     nice_alert.addEventListener('click',function(e){
@@ -90,15 +91,14 @@
     
     (w.alert = function alert (msg) {
       w.alert.is_nice = 'Of course it is!';
-      //if (nice_alert.childNodes.length > 99) return;
-      var li = cache.cloneNode(false);
-      li.appendChild(document.createTextNode(msg));
-      nice_alert.appendChild(li);
+      var box = cache.cloneNode(false);
+      box.appendChild(document.createTextNode(msg));
+      nice_alert.appendChild(box);
       var showing = setInterval(function(){
-        li.style.opacity = li.style.opacity/1 + 0.1;
-        li.style.paddingTop = parseInt(li.style.paddingTop) + 1 +'px';
-        li.style.paddingBottom = parseInt(li.style.paddingBottom) + 1 +'px';
-        if (li.style.opacity >= 0.9) {
+        box.style.opacity = box.style.opacity/1 + 0.1;
+        box.style.paddingTop = parseInt(box.style.paddingTop) + 1 +'px';
+        box.style.paddingBottom = parseInt(box.style.paddingBottom) + 1 +'px';
+        if (box.style.opacity >= 0.9) {
           clearInterval(showing);
         }
       }, 30);
