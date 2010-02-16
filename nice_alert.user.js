@@ -4,7 +4,7 @@
 // @include     *
 // @description Makes alert box suck less
 // @copyright   2008+, Nikita Vasilyev (http://userscripts.org/scripts/show/43780)
-// @version     1.1
+// @version     1.2
 // @licence     LGPL 3
 // ==/UserScript==
 
@@ -52,7 +52,6 @@
       border-bottom: 1px solid #ccc !important;\
       border-bottom: 1px solid rgba(0,0,0,0.3) !important;\
       margin: 0 !important;\
-      opacity: 0;\
       float: right !important;\
       clear: both !important;\
       overflow: hidden !important;\
@@ -71,13 +70,15 @@
       if (t.tagName == 'ALERTBOX') {
         var h = t.clientHeight - 18;
         t.style.height = h +'px';
+        var i = 9;
         var closing = setInterval(function(){
-          t.style.opacity -= 0.1;
+          i--;
+          t.style.opacity = i/10;
           t.style.paddingTop = parseInt(t.style.paddingTop) - 1 +'px';
           t.style.paddingBottom = parseInt(t.style.paddingBottom) - 1 +'px';
           var currentHeight = parseInt(t.style.height) - h/10;
           t.style.height = (currentHeight < 0 ? 0 : currentHeight) +'px';
-          if (t.style.opacity <= 0) {
+          if (i < 1) {
             t.style.display = 'none';
             clearInterval(closing);
           }
@@ -87,6 +88,7 @@
 
     var cache = document.createElement('ALERTBOX');
     cache.style.padding = '0px 16px';
+    cache.style.opacity = 0;
     cache.tabIndex = 0;
     
     (w.alert = function alert (msg) {
@@ -94,11 +96,13 @@
       var box = cache.cloneNode(false);
       box.appendChild(document.createTextNode(msg));
       nice_alert.appendChild(box);
+      var i = 1;
       var showing = setInterval(function(){
-        box.style.opacity = box.style.opacity/1 + 0.1;
+        box.style.opacity = i/10;
+        i++;
         box.style.paddingTop = parseInt(box.style.paddingTop) + 1 +'px';
         box.style.paddingBottom = parseInt(box.style.paddingBottom) + 1 +'px';
-        if (box.style.opacity >= 0.9) {
+        if (i > 9) {
           clearInterval(showing);
         }
       }, 30);
