@@ -12,9 +12,9 @@ After:
 How to install
 --------------
 
-Firefox Greasemonkey and Safari GreaseKit: just click on [nice-alert.user.js](/NV/nice-alert.js/raw/master/nice_alert.user.js)
+Firefox Greasemonkey and Safari GreaseKit: just click on [nice-alert.user.js](/NV/nice-alert.js/raw/master/nice_alert.js)
 
-Opera: download [nice-alert.user.js](/NV/nice-alert.js/raw/master/nice_alert.user.js) and rename it to nice-alert.js (without “user”). Put it to your UserJS directory (can be found at opera:about).
+Opera: download [nice_alert.js](/NV/nice-alert.js/raw/master/nice_alert.js) and rename it to nice-alert.js (without “user”). Put it to your UserJS directory (can be found at opera:about).
 
 [Google Chrome extension](https://chrome.google.com/extensions/detail/ehnbelnegmgdnjaghgomaakjcmpcakhk).
 
