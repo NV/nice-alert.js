@@ -1,6 +1,6 @@
 {
   "name": "Nice alert",
-  "version": "1.2.2",
+  "version": "1.3",
   "description": "Makes alert box suck less",
   "icons": {
     "32": "icon_32.png",
