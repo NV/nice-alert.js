@@ -19,6 +19,7 @@ Opera: download [nice_alert.user.js](http://userscripts.org/scripts/source/43780
 
 [Google Chrome extension](https://chrome.google.com/extensions/detail/ehnbelnegmgdnjaghgomaakjcmpcakhk)
 
+[Safari extension](http://userscripts.ru/js/nice-alert/Nice_alert.safariextz)
 
 Quote from Jef Raskin
 ---------------------
