@@ -6,6 +6,7 @@
 // @copyright   2008+, Nikita Vasilyev (http://userscripts.org/scripts/show/43780)
 // @version     1.3
 // @licence     LGPL 3
+// @icon        http://userscripts.ru/js/nice-alert/chrome/icon_48.png
 // ==/UserScript==
 
 
