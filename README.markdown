@@ -2,24 +2,22 @@ Nice-alert.js
 ===============================
 
 Before:    
-![Ugly](/NV/nice-alert.js/raw/master/ugly.png)
+![Ugly](https://raw.githubusercontent.com/NV/nice-alert.js/master/ugly.png)
 
 After:    
-![Nice](/NV/nice-alert.js/raw/master/nice.png)
+![Nice](https://raw.githubusercontent.com/NV/nice-alert.js/master/nice.png)
 
 [Demo](http://nv.github.com/nice-alert.js/)
 
 How to install
 --------------
 
-Firefox Greasemonkey and Safari GreaseKit: just click on [nice-alert.user.js](http://userscripts.org/scripts/source/43780.user.js)
-
-Opera: download [nice_alert.user.js](http://userscripts.org/scripts/source/43780.user.js) and rename it to nice-alert.js
-(without “user”). Put it into your UserJS directory (can be found at opera:about)
-
 [Google Chrome extension](https://chrome.google.com/extensions/detail/ehnbelnegmgdnjaghgomaakjcmpcakhk)
 
 [Safari extension](http://userscripts.ru/js/nice-alert/Nice_alert.safariextz)
+
+Firefox Greasemonkey and Safari GreaseKit: just click on [nice-alert.user.js](http://userscripts.org/scripts/source/43780.user.js)
+
 
 Quote from Jef Raskin
 ---------------------
