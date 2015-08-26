@@ -18,6 +18,11 @@ task :chrome do
     f.puts file
   end
   puts '+ chrome/nice_alert.js'.green
+  file = JSPP 'src/chrome_content_script.js'
+  File.open 'chrome/content_script.js', 'w' do |f|
+    f.puts file
+  end
+  puts '+ chrome/content_script.js'.green
 end
 
 task :safari do
